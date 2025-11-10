@@ -1,0 +1,2 @@
+#!/bin/bash
+java -jar target/excel2database-1.0-SNAPSHOT.jar "$@"
