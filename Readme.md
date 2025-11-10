@@ -13,6 +13,30 @@ Uso del programa:
 excel2database -f personas.xlsx -db agenda
 ```
 
+Para ello en nuestro sistema operativo debemos tener instalado maven con 
+``` bash
+sudo apt update
+sudo apt install maven
+```
+Una vez instalado, nos vamos al directorio del proyecto y ejecutamos 
+``` bash 
+mvn package
+```
+Una vez hecho eso, creamos el Script de Ejecución llamado 'excel2database' con el siguiente contenido
+```bash
+#!/bin/bash
+java -jar target/excel2database-1.0-SNAPSHOT.jar "$@"
+```
+Le asignamos permisos al archivo con
+``` bash
+chmod +x excel2database
+```
+Y por ultimo para la ejución hacemos 
+``` bash
+./excel2database -f ./datos/test.xlsx -db db-excel
+```
+
+
 ## Instalando Java para que funcione
 
 
